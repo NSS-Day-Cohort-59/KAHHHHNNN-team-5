@@ -32,14 +32,24 @@ const database = {
     { id: 1, size: "Bucket" },
     { id: 2, size: "Bread box" },
     { id: 3, size: "Rubbish Bin" }
-  ]
+  ],
+  newOrder: {}
+
 };
 
 
 export const getSeasonings = () => {
-  return database.map(seasoning => ({...seasoning}))
+  return database.seasonings.map(seasoning => ({...seasoning}))
 }
 
-export const setSeasonings = () => {
- 
+export const setSeasonings = (id) => {
+  return database.newOrder.seasoningId = id
+}
+
+export const getSauces = () => {
+  return database.sauces.map(sauce => ({ ...sauce }))
+}
+
+export const setSauce = (id) => {
+  database.newOrder.sauceId = id
 }

@@ -1,23 +1,24 @@
-import { getSeasonings, setSeasonings } from "./database.js"
+import { getCarbs, setCarb } from "./database.js"
 
-const seasonings= getSeasonings()
+const carbs = getCarbs()
 
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "seasoning") {
-            setSeasonings(parseInt(event.target.value))
+        if (event.target.name === "carb") {
+            setCarb(parseInt(event.target.value))
         }
     }
 )
 
-export const seasoningHtml = () => {
+export const carbHtml = () => {
     let html = "<ul>"
 
+    // Use .map() for converting objects to <li> elements
     const listItemsArray = styles.map(
         (style) => {
             return `<li>
-            <input type="radio" name="seasoning" value="${seasonings.id}" /> ${seasonings.name}`
+            <input type="radio" name="carb" value="${carbs.id}" /> ${carbs.name}`
         }
     )
 
