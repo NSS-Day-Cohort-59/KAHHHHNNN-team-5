@@ -1,0 +1,3 @@
+const seasonings = () => {
+    return "goodstuff"
+}
