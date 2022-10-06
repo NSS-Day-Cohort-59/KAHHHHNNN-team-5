@@ -34,3 +34,12 @@ const database = {
     { id: 3, size: "Rubbish Bin" }
   ]
 };
+
+
+export const getSeasonings = () => {
+  return database.map(seasoning => ({...seasoning}))
+}
+
+export const setSeasonings = () => {
+ 
+}

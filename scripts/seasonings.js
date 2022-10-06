@@ -1,3 +1,5 @@
-const seasonings = () => {
+
+
+export const seasonings = () => {
     return "goodstuff"
 }
