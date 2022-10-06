@@ -37,6 +37,15 @@ const database = {
 
 };
 
+
+export const getSeasonings = () => {
+  return database.seasonings.map(seasoning => ({...seasoning}))
+}
+
+export const setSeasonings = (id) => {
+  return database.newOrder.seasoningId = id
+}
+
 export const getSauces = () => {
   return database.sauces.map(sauce => ({ ...sauce }))
 }
